@@ -6,7 +6,7 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import ShopCategory from './Pages/ShopCategory'
  
 import Product from './Pages/Product'
-import Cart from './Pages/LoginSign'
+import Cart from './Pages/Cart'
 import LoginSign from './Pages/LoginSign'
 import Shop from './Pages/shop';
 import Footer from './Components/Footer/Footer';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/Herbs & Edibles" element={<ShopCategory banner={seeds_banner} category="Herbs & Edibles" />} />
         <Route path="/Healthy Vegetable" element={<ShopCategory  banner={vagetable_banner} category="Healthy Vegetable" />} />
         <Route path="/product/:productId" element={<Product />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<LoginSign />} />
       </Routes>
     </BrowserRouter>

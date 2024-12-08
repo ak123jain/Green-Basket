@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ProductDisplay.css'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
+import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
 
     const {product} = props
+
+    const {addtoCart} = useContext(ShopContext)
 
     return (
         <div className="productDisplay">
@@ -19,7 +22,7 @@ const ProductDisplay = (props) => {
                 <div className="product-image">
                     <img src={product.image} alt="" />
                 </div>
-                <button className='btn1' >Add to cart</button>
+                <button className='btn1' onClick={()=>{addtoCart(product.id)}} >Add to cart</button>
                 <button className='btn2' >BUY NOW</button>
             </div>
             <div className="productDisplay-right">
